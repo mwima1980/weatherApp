@@ -52,7 +52,7 @@ body {
    BACKGROUND - PICTURE
 ================================== */
 .background-picture {
-  background-image: url("/src/assets/images/picture/background.png");
+  background-image: url("/weatherApp/src/assets/images/picture/background.png");
   min-height: 100vh;
   background-size: cover;
   background-position: center;
