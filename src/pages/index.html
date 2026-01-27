@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/images/favicons/clear-day.svg"
+      type="image/x-icon"
+    />
+    <title>Wetter App</title>
+  </head>
+  <body>
+    <div class="background-picture"></div>
+    <div class="container">
+      <header class="app-header">
+        <form action="#" class="app-header__form">
+          <label for="search-city" class="app-header__form-label"
+            >Search-City</label
+          >
+          <input
+            type="search"
+            name="search-city"
+            id="search-city"
+            placeholder="Stadt eingeben"
+            class="app-header__form-input"
+          />
+          <button
+            type="submit"
+            id="search-button"
+            class="app-header__form-button"
+          >
+            Suchen
+          </button>
+        </form>
+      </header>
+      <main class="weather-card">
+        <section class="weather-card__current">
+          <div class="weather-card__current-location">
+            <div><span id="weather-city"></span>, Deutschland</div>
+          </div>
+          <div class="weather-card__current-temperature">
+            <img
+              src="/src/assets/images/icons/day/clear_sky_d.svg"
+              alt="Klar"
+              id="current-weather-icon"
+            />
+            <div class="conditional-icon">
+              <span id="current-temp">23°C</span>
+              <div id="temp-description">Teils sonnig</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-item__feel">
+              <img
+                src="/src/assets/images/icons/feelLike.svg"
+                alt="Gefühltes Wetter"
+              />
+              <div>Gefühlt: <span id="feels-like">19°C</span></div>
+            </div>
+            <div class="metric-item__humidity">
+              <img
+                src="/src/assets/images/icons/humidity.svg"
+                alt="Luftfeuchtigkeit"
+              />
+              <div>
+                Luftfeuchtigkeit: <span id="weather-humidity">58%</span>
+              </div>
+            </div>
+            <div class="metric-item__wind">
+              <img
+                src="/src/assets/images/icons/wind.svg"
+                alt="Windgeschwindigkeit"
+              />
+              <div>Wind: <span id="wind-speed">15 km/h</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="forecast">
+          <div class="forecast__title">
+            Wettervorhersage für die nächsten Tage
+          </div>
+
+          <div class="forecast__days">
+            <div class="forecast__day">
+              <div class="forecast__day-weekday">Di</div>
+              <div class="forecast__day-icon">
+                <img
+                  src="/src/assets/images/icons/day/clear_sky_d.svg"
+                  alt="Wettervorhersage"
+                />
+              </div>
+
+              <div class="forecast__temp">
+                <div class="forecast__temp--max">24°C/</div>
+                <div class="forecast__temp--min">16°C</div>
+              </div>
+            </div>
+            <div class="forecast__day">
+              <div class="forecast__day-weekday">Mi</div>
+              <div class="forecast__day-icon">
+                <img
+                  src="/src/assets/images/icons/day/clear_sky_d.svg"
+                  alt="Wettervorhersage"
+                />
+              </div>
+
+              <div class="forecast__temp">
+                <div class="forecast__temp--max">24°C/</div>
+                <div class="forecast__temp--min">16°C</div>
+              </div>
+            </div>
+            <div class="forecast__day">
+              <div class="forecast__day-weekday">Do</div>
+              <div class="forecast__day-icon">
+                <img
+                  src="/src/assets/images/icons/day/clear_sky_d.svg"
+                  alt="Wettervorhersage"
+                />
+              </div>
+
+              <div class="forecast__temp">
+                <div class="forecast__temp--max">24°C/</div>
+                <div class="forecast__temp--min">16°C</div>
+              </div>
+            </div>
+            <div class="forecast__day">
+              <div class="forecast__day-weekday">Fr</div>
+              <div class="forecast__day-icon">
+                <img
+                  src="/src/assets/images/icons/day/clear_sky_d.svg"
+                  alt="Wettervorhersage"
+                />
+              </div>
+
+              <div class="forecast__temp">
+                <div class="forecast__temp--max">24°C/</div>
+                <div class="forecast__temp--min">16°C</div>
+              </div>
+            </div>
+          </div>
+          <div class="sun-times">
+            <div class="sun-times__item--sunrise">
+              <div class="sun-times__icon">
+                <img
+                  src="/src/assets/images/icons/rising_sun/sunrise.svg"
+                  alt="Sonnenaufgang"
+                />
+              </div>
+              <div class="sun-times__label">Sonnenaufgang:</div>
+              <div class="sun-times__time">
+                <time datetime="" aria-label="Sonnenaufgang" id="sunrise"
+                  >5:32</time
+                >
+              </div>
+            </div>
+
+            <div class="sun-times__item--sunset">
+              <div class="sun-times__icon">
+                <img
+                  src="/src/assets/images/icons/rising_sun/sunset.svg"
+                  alt="Sonnenuntergang"
+                />
+              </div>
+              <div class="sun-times__label">Sonnenuntergang:</div>
+              <div class="sun-times__time">
+                <time datetime="" aria-label="Sonnenuntergang" id="sunset"
+                  >17:48</time
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="uv-badge">
+          <div class="uv-badge__icon">
+            <img src="/src/assets/images/icons/uv-badge.svg" alt="UV - Index" />
+          </div>
+          <div class="uv-badge__label">UV - Index:</div>
+          <div class="uv-badge__value">Mittel</div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="/src/js/app.js"></script>
+  </body>
+</html>
