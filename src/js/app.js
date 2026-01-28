@@ -124,10 +124,9 @@ function handleSearchCity(event) {
           Math.round(tempForecast.tempMax[i]) + "°C /";
         el.forecastTempsMin[i].textContent =
           Math.round(tempForecast.tempMin[i]) + "°C";
-      }
-      for (let i = 0; i < el.forecastIconElement.length; i++) {
         el.forecastIconElement[i].src = WEATHER_ICON[forecastIcon.icons[i]];
       }
+
       el.searchCity.value = "";
     })
     .catch(function (error) {
